@@ -3,14 +3,11 @@ class Solution {
         
         Map<Integer,Integer> map = new HashMap<>();
         for(int i = 0; i < nums.length;i++){
-            map.put(nums[i],i);
-        }
-
-        for(int j = 0; j < nums.length;j++){
-            int find = target - nums[j];
-            if(map.containsKey(find) && map.get(find) != j){
-                return new int [] {j,map.get(find)};
+            int find = target - nums[i];
+            if(map.containsKey(find) && map.get(find) != i){
+                return new int [] {i,map.get(find)};
             }
+            map.put(nums[i],i);
         }
         return new int []{};
     }
