@@ -10,7 +10,6 @@ class Solution {
            }
         }
 
-        System.out.println(map);
         for(Integer key: map.keySet()){
             if(map.get(key) == 1){
                 return key;
